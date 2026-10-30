@@ -29,7 +29,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* الشعار المصمم برمجياً */
         .logo-box {
             display: flex;
             align-items: center;
@@ -37,44 +36,10 @@
             text-decoration: none;
         }
 
-        .logo-icon-draw {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 4px solid #003366;
-            border-left-color: #00a8ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: 900;
-            color: #00a8ff;
-            position: relative;
-        }
-
-        .logo-text-group {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-
-        .brand-title {
-            font-size: 20px;
-            font-weight: 800;
-            color: #003366;
-            line-height: 1.1;
-        }
-
-        .brand-title span {
-            color: #00a8ff;
-        }
-
-        .brand-sub {
-            font-size: 11px;
-            color: #666;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-            margin-top: 2px;
+        .company-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
         }
 
         .header-contacts {
@@ -214,22 +179,28 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .client-card {
             background: white;
-            padding: 12px 20px;
+            padding: 10px 15px;
             border-radius: 8px;
-            font-weight: bold;
-            color: #444;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             border: 1px solid #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 160px;
+            height: 70px;
+        }
+
+        .client-logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         /* نموذج الطلب */
@@ -303,14 +274,10 @@
 </head>
 <body>
 
-    <!-- الهيدر مع تصميم اللوجو البرمجي بنفس نمط الإعلان -->
+    <!-- الهيدر مع شعار الشركة الجديد -->
     <header>
         <div class="logo-box">
-            <div class="logo-icon-draw">e</div>
-            <div class="logo-text-group">
-                <div class="brand-title">easy<span>solutions.site</span></div>
-                <div class="brand-sub">— Your IT Partner —</div>
-            </div>
+            <img src="logo.png" alt="Easy Solutions Site" class="company-logo">
         </div>
         <div class="header-contacts">
             <a href="tel:01010444604" class="phone-link">
@@ -364,17 +331,17 @@
         </div>
     </section>
 
-    <!-- شركاء النجاح والعملاء -->
+    <!-- شركاء النجاح والعملاء مع الشعارات -->
     <section class="clients-section">
         <h2>شركاء النجاح وعملاؤنا</h2>
         <div class="clients-grid">
-            <div class="client-card">مطحن الأولى</div>
-            <div class="client-card">Egyfoum</div>
-            <div class="client-card">Nerva</div>
-            <div class="client-card">ICE - International Consultant Engineers</div>
-            <div class="client-card">Traders</div>
-            <div class="client-card">ACG</div>
-            <div class="client-card">Bedaya</div>
+            <div class="client-card"><img src="aloulaa.png" alt="مطحن الأولى" class="client-logo"></div>
+            <div class="client-card"><img src="egyfoum.png" alt="Egyfoum" class="client-logo"></div>
+            <div class="client-card"><img src="nerva.png" alt="Nerva" class="client-logo"></div>
+            <div class="client-card"><img src="ice.png" alt="ICE" class="client-logo"></div>
+            <div class="client-card"><img src="traders.png" alt="Traders" class="client-logo"></div>
+            <div class="client-card"><img src="acg.png" alt="ACG" class="client-logo"></div>
+            <div class="client-card"><img src="bedaya.png" alt="Bedaya" class="client-logo"></div>
         </div>
     </section>
 
