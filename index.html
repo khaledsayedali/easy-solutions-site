@@ -19,27 +19,55 @@
             color: #333;
         }
 
-        /* الهيدر والشعار */
+        /* الهيدر والشعار المكبر والواضح */
         header {
             background-color: #ffffff;
-            padding: 12px 5%;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo-box {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             text-decoration: none;
         }
 
+        /* تكبير الشعار الرئيسي ليصبح واضحاً تماماً */
         .company-logo {
-            height: 55px;
+            height: 75px;
             width: auto;
             object-fit: contain;
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: 800;
+            color: #003366;
+            line-height: 1.1;
+        }
+
+        .brand-name span {
+            color: #00a8ff;
+        }
+
+        .brand-tagline {
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 3px;
         }
 
         .header-contacts {
@@ -50,44 +78,54 @@
 
         .phone-link {
             text-decoration: none;
-            color: #333;
+            color: #003366;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 15px;
             display: flex;
             align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
+            gap: 6px;
+            padding: 8px 12px;
+            background: #eef2f5;
+            border-radius: 6px;
+            transition: all 0.3s;
         }
 
         .phone-link:hover {
-            color: #0088cc;
+            background: #00a8ff;
+            color: white;
         }
 
-        .whatsapp-icon {
+        .whatsapp-btn {
+            background-color: #e3fcef;
             color: #25D366;
-            font-size: 18px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #25D366 !important;
+            color: white !important;
         }
 
         /* البانر الرئيسي */
         .hero {
-            background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(0, 102, 153, 0.9) 100%), 
+            background: linear-gradient(135deg, rgba(0, 51, 102, 0.92) 0%, rgba(0, 102, 153, 0.92) 100%), 
                         url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 80px 20px;
         }
 
         .hero h1 {
-            font-size: 32px;
+            font-size: 36px;
             margin-bottom: 15px;
+            font-weight: 800;
         }
 
         .hero p {
-            font-size: 16px;
-            max-width: 700px;
-            margin: 0 auto 25px;
+            font-size: 18px;
+            max-width: 750px;
+            margin: 0 auto 30px;
             line-height: 1.6;
             opacity: 0.95;
         }
@@ -95,65 +133,95 @@
         .btn-cta {
             background-color: #00a8ff;
             color: white;
-            padding: 12px 30px;
+            padding: 14px 35px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
+            font-size: 16px;
             display: inline-block;
-            transition: background 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 168, 255, 0.4);
+            transition: transform 0.2s, background 0.3s;
         }
 
         .btn-cta:hover {
             background-color: #0088cc;
+            transform: translateY(-2px);
+        }
+
+        /* قسم مميزاتنا لجذب العملاء (جديد) */
+        .features-bar {
+            background-color: #ffffff;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            color: #003366;
+            font-size: 15px;
+        }
+
+        .feature-item i {
+            font-size: 24px;
+            color: #00a8ff;
         }
 
         /* قسم الخدمات */
         .services-section {
-            padding: 50px 5%;
+            padding: 60px 5%;
             text-align: center;
         }
 
         .services-section h2 {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             color: #003366;
-            font-size: 26px;
+            font-size: 30px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1150px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .service-card {
             background: white;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
             text-align: right;
             transition: transform 0.3s;
+            border-top: 4px solid #00a8ff;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
         }
 
         .service-img {
             width: 100%;
-            height: 180px;
+            height: 190px;
             object-fit: cover;
         }
 
         .service-content {
-            padding: 20px;
+            padding: 22px;
         }
 
         .service-card h3 {
             margin-bottom: 10px;
             color: #003366;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .service-card p {
@@ -165,14 +233,14 @@
         /* قسم العملاء وشريفي النجاح */
         .clients-section {
             background-color: #eef2f5;
-            padding: 45px 5%;
+            padding: 50px 5%;
             text-align: center;
         }
 
         .clients-section h2 {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #003366;
-            font-size: 24px;
+            font-size: 26px;
         }
 
         .clients-grid {
@@ -186,15 +254,20 @@
 
         .client-card {
             background: white;
-            padding: 10px 15px;
+            padding: 12px 18px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border: 1px solid #ddd;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 160px;
-            height: 75px;
+            width: 165px;
+            height: 80px;
+            transition: transform 0.2s;
+        }
+
+        .client-card:hover {
+            transform: scale(1.03);
         }
 
         .client-logo {
@@ -205,29 +278,31 @@
 
         /* نموذج الطلب */
         .form-section {
-            max-width: 650px;
-            margin: 40px auto;
+            max-width: 700px;
+            margin: 50px auto;
             background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
         }
 
         .form-section h2 {
             text-align: center;
             color: #003366;
             margin-bottom: 10px;
+            font-size: 28px;
         }
 
         .form-section p {
             text-align: center;
             color: #666;
-            margin-bottom: 25px;
-            font-size: 14px;
+            margin-bottom: 30px;
+            font-size: 15px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             text-align: right;
         }
 
@@ -235,15 +310,23 @@
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 15px;
+            color: #333;
         }
 
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+            background-color: #f8fafc;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #00a8ff;
+            outline: none;
+            background-color: #fff;
         }
 
         .btn-submit {
@@ -251,11 +334,12 @@
             background-color: #00a8ff;
             color: white;
             border: none;
-            padding: 14px;
-            font-size: 16px;
+            padding: 16px;
+            font-size: 18px;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 168, 255, 0.4);
             transition: background 0.3s;
         }
 
@@ -267,43 +351,59 @@
             background-color: #0b131e;
             color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 13px;
+            padding: 25px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر مع الشعار الجديد -->
+    <!-- الهيدر المكبر والواضح تماماً -->
     <header>
         <div class="logo-box">
             <img src="logo.jpg" alt="Easy Solutions Site" class="company-logo" onerror="this.onerror=null; this.src='logo.png';">
+            <div class="logo-text-group">
+                <div class="brand-name">Easy Solutions <span>Site</span></div>
+                <div class="brand-tagline">YOUR IT PARTNER</div>
+            </div>
         </div>
         <div class="header-contacts">
             <a href="tel:01010444604" class="phone-link">
                 <i class="fas fa-phone-alt"></i> 01010444604
             </a>
-            <a href="https://wa.me/201010444604" target="_blank" class="phone-link whatsapp-icon" title="واتساب">
-                <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/201010444604" target="_blank" class="phone-link whatsapp-btn" title="تواصل عبر الواتساب">
+                <i class="fab fa-whatsapp"></i> واتساب
             </a>
-            <span style="color:#ccc;">|</span>
-            <a href="tel:01270691979" class="phone-link">
+            <a href="tel:01270691979" class="phone-link" style="display:none;">
                 <i class="fas fa-phone-alt"></i> 01270691979
-            </a>
-            <a href="https://wa.me/201270691979" target="_blank" class="phone-link whatsapp-icon" title="واتساب">
-                <i class="fab fa-whatsapp"></i>
             </a>
         </div>
     </header>
 
-    <!-- البانر الرئيسي -->
+    <!-- البانر الرئيسي التسويقي -->
     <section class="hero">
         <h1>حلول IT متكاملة لتأمين واستقرار أعمالك</h1>
         <p>احصل على فريق IT كامل لشركتك باشتراك شهري ثابت ودعنا نعتني بالشبكات والأجهزة والأمان دون مصاريف تعيين مرتفعة.</p>
         <a href="#contact" class="btn-cta">احصل على تقييم مجاني الآن</a>
     </section>
 
-    <!-- خدماتنا مع الصور -->
+    <!-- شريط الثقة والمميزات لجذب العملاء (جديد) -->
+    <section class="features-bar">
+        <div class="feature-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>حماية وأمان متكامل للبيانات</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-bolt"></i>
+            <span>استجابة سريعة ودعم فني فورى</span>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-user-tie"></i>
+            <span>مهندسون خبراء في شبكات الشركات</span>
+        </div>
+    </section>
+
+    <!-- خدماتنا المتميزة -->
     <section class="services-section">
         <h2>خدماتنا المتميزة للشركات</h2>
         <div class="services-grid">
@@ -331,13 +431,13 @@
         </div>
     </section>
 
-    <!-- شركاء النجاح والعملاء (مع دعم امتدادات .jpg و .png تلقائياً) -->
+    <!-- شركاء النجاح والعملاء -->
     <section class="clients-section">
         <h2>شركاء النجاح وعملاؤنا</h2>
         <div class="clients-grid">
             <div class="client-card"><img src="Aloulaa.jpg" alt="مطحن الأولى" class="client-logo"></div>
-            <div class="client-card"><img src="egypt-foam-dark-logo.png" alt="Egy-Foam" class="client-logo"></div>
-            <div class="client-card"><img src="Nerva.jpg" alt="Nerva Consulting" class="client-logo"></div>
+            <div class="client-card"><img src="egypt-foam-dark-logo.png" alt="Egyfoum" class="client-logo"></div>
+            <div class="client-card"><img src="Nerva.jpg" alt="Nerva" class="client-logo"></div>
             <div class="client-card"><img src="ice.png" alt="ICE" class="client-logo"></div>
             <div class="client-card"><img src="Traders.jpg" alt="Traders" class="client-logo"></div>
             <div class="client-card"><img src="ACG-Silver-Logo-Final1.png" alt="ACG" class="client-logo"></div>
@@ -357,7 +457,7 @@
             </div>
             <div class="form-group">
                 <label>رقم الهاتف / الواتساب:</label>
-                <input type="text" name="phone" required placeholder="أدخل رقم التواصل">
+                <input type="text" name="phone" required placeholder="أدخل رقم التواصل (واتساب)">
             </div>
             <div class="form-group">
                 <label>تفاصيل احتياجك أو مشكلتك (اختياري):</label>
