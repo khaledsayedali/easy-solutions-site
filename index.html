@@ -19,7 +19,7 @@
             color: #333;
         }
 
-        /* الهيدر والعناوين */
+        /* الهيدر والشعار */
         header {
             background-color: #ffffff;
             padding: 15px 5%;
@@ -29,7 +29,19 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* مكان لوجو الشركة الخاص بك */
+        .company-logo {
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .logo-text {
             font-size: 24px;
             font-weight: bold;
             color: #0088cc;
@@ -58,15 +70,18 @@
 
         .whatsapp-icon {
             color: #25D366;
-            font-size: 16px;
+            font-size: 18px;
         }
 
-        /* البانر الرئيسي Hero */
+        /* البانر الرئيسي مع خلفية Data Center */
         .hero {
-            background: linear-gradient(135deg, #003366 0%, #006699 100%);
+            background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(0, 102, 153, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         .hero h1 {
@@ -79,7 +94,7 @@
             max-width: 700px;
             margin: 0 auto 25px;
             line-height: 1.6;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .btn-cta {
@@ -97,55 +112,65 @@
             background-color: #0088cc;
         }
 
-        /* قسم الخدمات */
+        /* قسم الخدمات مع الصور */
         .services-section {
             padding: 50px 5%;
             text-align: center;
         }
 
         .services-section h2 {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             color: #003366;
+            font-size: 26px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1150px;
             margin: 0 auto;
         }
 
         .service-card {
             background: white;
-            padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid #00a8ff;
-            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            text-align: right;
+            transition: transform 0.3s;
         }
 
-        .service-icon {
-            font-size: 36px;
-            color: #00a8ff;
-            margin-bottom: 15px;
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 20px;
         }
 
         .service-card h3 {
             margin-bottom: 10px;
-            color: #222;
+            color: #003366;
+            font-size: 18px;
         }
 
         .service-card p {
             color: #666;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
-        /* قسم العملاء */
+        /* قسم العملاء وشريفي النجاح (مع مكان لشعاراتهم) */
         .clients-section {
             background-color: #eef2f5;
-            padding: 40px 5%;
+            padding: 45px 5%;
             text-align: center;
         }
 
@@ -159,22 +184,33 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            max-width: 1000px;
+            gap: 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .client-card {
             background: white;
-            padding: 12px 25px;
-            border-radius: 20px;
+            padding: 12px 20px;
+            border-radius: 8px;
             font-weight: bold;
             color: #444;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 150px;
+            justify-content: center;
         }
 
-        /* قسم نموذج التواصل */
+        /* مكان صغري لشعار العميل إذا أردت استبدال النص بصورة لوجو */
+        .client-logo {
+            height: 25px;
+            object-fit: contain;
+        }
+
+        /* نموذج الطلب */
         .form-section {
             max-width: 650px;
             margin: 40px auto;
@@ -245,9 +281,13 @@
 </head>
 <body>
 
-    <!-- الهيدر -->
+    <!-- الهيدر مع مكان لشعار شركتك -->
     <header>
-        <div class="logo">Easy <span style="color:#00a8ff;">Solutions</span></div>
+        <div class="logo-container">
+            <!-- استبدل الرابط أدناه برابط أو اسم ملف شعار شركتك الفعلي لاحقاً -->
+            <!-- <img src="logo.png" alt="Easy Solutions Logo" class="company-logo"> -->
+            <div class="logo-text">Easy <span style="color:#00a8ff;">Solutions</span></div>
+        </div>
         <div class="header-contacts">
             <a href="tel:01010444604" class="phone-link">
                 <i class="fas fa-phone-alt"></i> 01010444604
@@ -265,36 +305,47 @@
         </div>
     </header>
 
-    <!-- البانر -->
+    <!-- البانر الرئيسي مع خلفية تقنية Data Center -->
     <section class="hero">
         <h1>حلول IT متكاملة لتأمين واستقرار أعمالك</h1>
         <p>احصل على فريق IT كامل لشركتك باشتراك شهري ثابت ودعنا نعتني بالشبكات والأجهزة والأمان دون مصاريف تعيين مرتفعة.</p>
         <a href="#contact" class="btn-cta">احصل على تقييم مجاني الآن</a>
     </section>
 
-    <!-- خدماتنا -->
+    <!-- خدماتنا مع الصور التعبيرية -->
     <section class="services-section">
         <h2>خدماتنا المتميزة للشركات</h2>
         <div class="services-grid">
+            <!-- خدمة 1: الدعم الفني -->
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-headset"></i></div>
-                <h3>الدعم الفني والصيانة</h3>
-                <p>دعم فني عن بُعد وزيارات ميدانية سريعة لصيانة الأجهزة، اللابتوبات، والطابعات لتجنب توقف الشغل.</p>
+                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80" alt="الدعم الفني والصيانة" class="service-img">
+                <div class="service-content">
+                    <h3>الدعم الفني والصيانة</h3>
+                    <p>دعم فني عن بُعد وزيارات ميدانية سريعة لصيانة الأجهزة، اللابتوبات، والطابعات لتجنب توقف الشغل.</p>
+                </div>
             </div>
+
+            <!-- خدمة 2: الشبكات والسويتشات -->
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-                <h3>تأسيس وإدارة الشبكات</h3>
-                <p>ربط الفروع، إعداد السويتشات، أجهزة الراوتر والـ Firewall لحماية بيانات شركتك وتحسين السرعة.</p>
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="تأسيس وإدارة الشبكات" class="service-img">
+                <div class="service-content">
+                    <h3>تأسيس وإدارة الشبكات</h3>
+                    <p>ربط الفروع، إعداد السويتشات، أجهزة الراوتر والـ Firewall لحماية بيانات شركتك وتحسين السرعة.</p>
+                </div>
             </div>
+
+            <!-- خدمة 3: الكاميرات وأنظمة الحماية -->
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>الأجهزة الأمنية والإيميلات</h3>
-                <p>تركيب وإدارة كاميرات المراقبة، أجهزة البصمة، وإعداد Domain وإيميلات الشركة الرسمية.</p>
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" alt="الأجهزة الأمنية والإيميلات" class="service-img">
+                <div class="service-content">
+                    <h3>الأجهزة الأمنية والإيميلات</h3>
+                    <p>تركيب وإدارة كاميرات المراقبة، أجهزة البصمة، وإعداد Domain وإيميلات الشركة الرسمية.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- شركاء النجاح -->
+    <!-- شركاء النجاح والعملاء -->
     <section class="clients-section">
         <h2>شركاء النجاح وعملاؤنا</h2>
         <div class="clients-grid">
@@ -308,9 +359,9 @@
         </div>
     </section>
 
-    <!-- نموذج الطلب -->
+    <!-- نموذج طلب تقييم مجاني -->
     <section class="form-section" id="contact">
-        <h2>طلب تقييم مجاني احتياجات شركتك</h2>
+        <h2>طلب تقييم مجاني لاحتياجات شركتك</h2>
         <p>اترك بياناتك وسيتواصل معك أحد مهندسينا خلال ساعات قليلة</p>
         
         <form action="https://formspree.io/f/maeedlny" method="POST">
