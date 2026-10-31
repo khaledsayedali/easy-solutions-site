@@ -7,6 +7,11 @@
 <meta name="description" content="Easy Solutions تتولى الـIT لشركتك: دعم فني، شبكات، حماية، سيرفرات ونسخ احتياطي، وإيميلات الشركة. باشتراك شهري ثابت. اطلب تقييماً مجانياً.">
 <meta property="og:title" content="Easy Solutions | شريكك في الـIT">
 <meta property="og:description" content="قسم IT كامل لشركتك باشتراك شهري ثابت، بخبرة تتجاوز 19 عاماً.">
+<link rel="icon" href="logo.jpg">
+<link rel="canonical" href="https://www.easy-solutions.site/">
+<meta property="og:image" content="https://www.easy-solutions.site/logo.jpg">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Easy Solutions Site","description":"دعم فني وشبكات والحماية والسيرفرات والنسخ الاحتياطي وإيميلات الشركات باشتراك شهري ثابت","url":"https://www.easy-solutions.site/","logo":"https://www.easy-solutions.site/logo.jpg","telephone":["+201010444604","+201270691979"],"areaServed":"EG","serviceType":["الدعم الفني","الشبكات","الحماية والجدران النارية","السيرفرات والنسخ الاحتياطي","Microsoft 365 والإيميلات","الكاميرات وأجهزة البصمة"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
@@ -60,8 +65,6 @@ h2.t{font-size:clamp(26px,4vw,36px);line-height:1.4;margin-bottom:8px}
 .alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .about{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
 .about p{margin-bottom:14px;color:#2B3F57}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.chips span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:14.5px;font-weight:500}
 .certs{background:var(--ink);color:#fff;border-radius:14px;padding:26px}
 .certs h3{font-size:19px;margin-bottom:10px}
 .certs li{list-style:none;padding:10px 0;border-top:1px solid #2D4D7A;font-size:16px;color:#D6E2F0}
@@ -82,6 +85,13 @@ td:last-child{color:var(--teal);font-weight:500}
 .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
 .logos div{background:#fff;border:1px solid var(--line);border-radius:12px;height:104px;display:flex;align-items:center;justify-content:center;padding:14px}
 .logos img{max-height:72px;max-width:100%;object-fit:contain}
+
+/* تصميم آراء العملاء (Testimonials) الجديد */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testimonial-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.testimonial-card p{color:var(--ink);font-size:16px;margin-bottom:16px;font-style:italic}
+.testimonial-author{font-weight:700;color:var(--blue);font-size:15px}
+
 details{border-bottom:1px solid var(--line);padding:16px 0}
 summary{font-weight:700;cursor:pointer;font-size:18px}
 details p{margin-top:8px;color:var(--muted)}
@@ -105,10 +115,10 @@ footer img{height:44px;border-radius:8px;background:#fff;padding:3px}
 @media (max-width:860px){
 nav{display:none}
 .hero,.about,.contact .g{grid-template-columns:1fr}
-.trust .wrap,.grid3,.steps{grid-template-columns:1fr 1fr}
+.trust .wrap,.grid3,.steps,.testimonials-grid{grid-template-columns:1fr 1fr}
 section{padding:48px 0}
 }
-@media (max-width:560px){.trust .wrap,.grid3,.steps{grid-template-columns:1fr}.brand img{height:62px}}
+@media (max-width:560px){.trust .wrap,.grid3,.steps,.testimonials-grid{grid-template-columns:1fr}.brand img{height:62px}}
 </style>
 </head>
 <body>
@@ -128,7 +138,7 @@ section{padding:48px 0}
  <div class="wrap">
   <div class="bar">
    <a class="brand" href="#"><img src="logo.jpg" alt="شعار Easy Solutions Site"><b>Easy Solutions Site<small>شريكك في الـIT</small></b></a>
-   <nav><a href="#services">الخدمات</a><a href="#about">من نحن</a><a href="#clients">عملاؤنا</a><a href="#contact">تواصل معنا</a></nav>
+   <nav><a href="#services">الخدمات</a><a href="#about">من نحن</a><a href="#testimonials">آراء العملاء</a><a href="#clients">عملاؤنا</a><a href="#contact">تواصل معنا</a></nav>
    <a class="tel" href="tel:+201010444604">01010444604</a>
   </div>
   <div class="hero">
@@ -196,7 +206,29 @@ section{padding:48px 0}
  </div>
 </section>
 
-<section id="how">
+<!-- قسم آراء العملاء الجديد (Testimonials) -->
+<section id="testimonials">
+ <div class="wrap">
+  <h2 class="t">ماذا يقول عملاؤنا عنا</h2>
+  <p class="sub">شهادات حية من شركاء نجاح نعمل معهم بانتظام لتأمين بيئة العمل لديهم.</p>
+  <div class="testimonials-grid">
+   <div class="testimonial-card">
+    <p>"التعامل مع Easy Solutions Site أراحنا تماماً من مشاكل الشبكات وانقطاعات السيرفر. الاحترافية وسرعة الاستجابة في حل الأزمات فارقة جداً معنا في الاستشارات الهندسية."</p>
+    <div class="testimonial-author">— شركة ICE (International Consultant Engineers)</div>
+   </div>
+   <div class="testimonial-card">
+    <p>"نظام الـ IT والشبكات وأجهزة البصمة في المعهد أصبحت تعمل بكفاءة عالية وبدون أي تعطيل بفضل الدعم الفني المتميز والمتابعة المستمرة."</p>
+    <div class="testimonial-author">— معهد نور الإسلام الأزهرى</div>
+   </div>
+   <div class="testimonial-card">
+    <p>"خدمة ممتازة واشتراك شهري واضح ومريح. تولي إدارة الإيميلات الرسمية وحماية البيانات أضاف لنا راحة بال كبيرة في أعمال الاستيراد والتصدير."</p>
+    <div class="testimonial-author">— شركة Traders للاستيراد والتصدير</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="how">
  <div class="wrap">
   <h2 class="t">كيف نبدأ معك؟</h2>
   <p class="sub">خطوات واضحة، وتعرف التكلفة قبل أن تلتزم.</p>
@@ -208,7 +240,7 @@ section{padding:48px 0}
  </div>
 </section>
 
-<section class="alt" id="cases">
+<section id="cases">
  <div class="wrap">
   <h2 class="t">من خبرتنا الميدانية</h2>
   <p class="sub">أمثلة على مشكلات حقيقية عالجناها، وكيف.</p>
@@ -220,7 +252,7 @@ section{padding:48px 0}
  </div>
 </section>
 
-<section id="compare">
+<section class="alt" id="compare">
  <div class="wrap">
   <h2 class="t">لماذا الاشتراك بدل توظيف موظف IT؟</h2>
   <p class="sub">مقارنة بسيطة لتقرر ما يناسب شركتك.</p>
@@ -233,23 +265,24 @@ section{padding:48px 0}
  </div>
 </section>
 
-<section class="alt" id="clients">
+<section id="clients">
  <div class="wrap">
   <h2 class="t">شركات تثق بنا</h2>
   <p class="sub">نعمل مع شركات في قطاعات مختلفة، من التصنيع إلى التجارة والخدمات الهندسية.</p>
   <div class="logos">
-   <div><img src="Aloulaa.jpg" alt="مطحن الأولى"></div>
-   <div><img src="egypt-foam-dark-logo.png" alt="Egyfoam"></div>
-   <div><img src="Nerva.jpg" alt="Nerva"></div>
-   <div><img src="ice.png" alt="ICE"></div>
-   <div><img src="Traders.jpg" alt="Traders"></div>
-   <div><img src="ACG-Silver-Logo-Final1.png" alt="ACG"></div>
-   <div><img src="Bedaya.png" alt="Bedaya"></div>
+   <div><img loading="lazy" src="Aloulaa.jpg" alt="مطحن الأولى"></div>
+   <div><img loading="lazy" src="egypt-foam-dark-logo.png" alt="Egyfoam"></div>
+   <div><img loading="lazy" src="Nerva.jpg" alt="Nerva"></div>
+   <div><img loading="lazy" src="ice.png" alt="ICE"></div>
+   <div><img loading="lazy" src="Traders.jpg" alt="Traders"></div>
+   <div><img loading="lazy" src="ACG-Silver-Logo-Final1.png" alt="ACG"></div>
+   <div><img loading="lazy" src="Bedaya.png" alt="Bedaya"></div>
+   <div><img loading="lazy" src="Nour2.jpg" alt="معهد نور الإسلام الأزهري"></div>
   </div>
  </div>
 </section>
 
-<section id="faq">
+<section class="alt" id="faq">
  <div class="wrap">
   <h2 class="t">أسئلة شائعة</h2>
   <details><summary>كم تكلفة الاشتراك؟</summary><p>تختلف بحسب عدد الأجهزة والمواقع واحتياجك. بعد التقييم المجاني نعطيك سعراً شهرياً ثابتاً مكتوباً.</p></details>
