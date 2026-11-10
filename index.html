@@ -140,6 +140,25 @@ body{font-size:18px;line-height:1.95}
 .fab{width:60px;height:60px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25D366}
 .fab svg{width:32px;height:32px;fill:#fff}
 @media (max-width:560px){body{font-size:17px}}
+#check .cq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+#check .qt{flex:1;min-width:240px;font-size:17px}
+#check .opt{display:flex;gap:8px}
+#check .opt input{position:absolute;opacity:0;width:1px;height:1px}
+#check .opt label{cursor:pointer;border:2px solid var(--line);border-radius:999px;padding:6px 22px;font-weight:700;background:#fff}
+#check .opt input:checked+label{background:var(--ink);color:#fff;border-color:var(--ink)}
+#check .opt input:focus-visible+label{outline:3px solid var(--amber);outline-offset:2px}
+.cerr{color:#B3261E;font-weight:700;margin:10px 0}
+.cres{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.score{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+#cnum{font-size:40px;font-weight:700}
+.lv{padding:5px 18px;border-radius:999px;font-weight:700;color:#fff}
+.lv.ok{background:#1E7A46}.lv.mid{background:#9A6200}.lv.bad{background:#B3261E}
+#clist{margin:14px 22px 0 0}#clist li{margin-bottom:10px}
+.cform{margin-top:22px;border-top:1px solid var(--line);padding-top:18px}
+.cform h3{margin-bottom:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wabtn{background:#1E9E57;color:#fff;margin-top:14px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -159,7 +178,7 @@ body{font-size:18px;line-height:1.95}
  <div class="wrap">
   <div class="bar">
    <a class="brand" href="#"><img src="logo.jpg" alt="شعار Easy Solutions Site"><b>Easy Solutions Site<small>شريكك في الـIT</small></b></a>
-   <nav><a href="#services">الخدمات</a><a href="#portfolio">معرض الأعمال (قبل وبعد)</a><a href="#about">من نحن</a><a href="#testimonials">آراء العملاء</a><a href="#faq">أسئلة شائعة</a><a href="#clients">عملاؤنا</a><a href="#contact">تواصل معنا</a></nav>
+   <nav><a href="#services">الخدمات</a><a href="#portfolio">معرض الأعمال (قبل وبعد)</a><a href="#about">من نحن</a><a href="#testimonials">آراء العملاء</a><a href="#faq">أسئلة شائعة</a><a href="#check">افحص شركتك</a><a href="#clients">عملاؤنا</a><a href="#contact">تواصل معنا</a></nav>
    <a class="tel" href="tel:+201010444604">01010444604</a>
   </div>
   <div class="hero">
@@ -405,7 +424,42 @@ body{font-size:18px;line-height:1.95}
 <section class="alt" id="faq"><div class="wrap"><h2 class="t">أسئلة شائعة</h2><details><summary>كم تكلفة الاشتراك؟</summary><p>تختلف بحسب عدد الأجهزة والمواقع واحتياجك. بعد التقييم المجاني نعطيك سعراً شهرياً ثابتاً مكتوباً.</p></details><details><summary>ماذا لو كان لدي موظف IT بالفعل؟</summary><p>نعمل معه كدعم إضافي، أو نتولى الأجزاء التي يحتاج مساعدة فيها مثل الشبكات والحماية والنسخ الاحتياطي.</p></details><details><summary>هل الدعم عن بُعد فقط؟</summary><p>لا، نقدم دعماً عن بُعد للحلول السريعة، وزيارات ميدانية عند الحاجة لصيانة الأجهزة وتركيب الشبكات.</p></details><details><summary>هل بياناتنا في أمان معكم؟</summary><p>نعمل على حماية بياناتك بجدران نارية ونسخ احتياطي وضبط الصلاحيات، ولا نشارك معلومات شركتك مع أي طرف.</p></details><details><summary>كم يستغرق التقييم المجاني؟</summary><p>نحدد معك موعداً مناسباً بعد تواصلك، ونشرح لك النتيجة والأولويات بعده.</p></details></div></section>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كم تكلفة الاشتراك؟","acceptedAnswer":{"@type":"Answer","text":"تختلف بحسب عدد الأجهزة والمواقع واحتياجك. بعد التقييم المجاني نعطيك سعراً شهرياً ثابتاً مكتوباً."}},{"@type":"Question","name":"ماذا لو كان لدي موظف IT بالفعل؟","acceptedAnswer":{"@type":"Answer","text":"نعمل معه كدعم إضافي، أو نتولى الأجزاء التي يحتاج مساعدة فيها مثل الشبكات والحماية والنسخ الاحتياطي."}},{"@type":"Question","name":"هل الدعم عن بُعد فقط؟","acceptedAnswer":{"@type":"Answer","text":"لا، نقدم دعماً عن بُعد للحلول السريعة، وزيارات ميدانية عند الحاجة لصيانة الأجهزة وتركيب الشبكات."}},{"@type":"Question","name":"هل بياناتنا في أمان معكم؟","acceptedAnswer":{"@type":"Answer","text":"نعمل على حماية بياناتك بجدران نارية ونسخ احتياطي وضبط الصلاحيات، ولا نشارك معلومات شركتك مع أي طرف."}},{"@type":"Question","name":"كم يستغرق التقييم المجاني؟","acceptedAnswer":{"@type":"Answer","text":"نحدد معك موعداً مناسباً بعد تواصلك، ونشرح لك النتيجة والأولويات بعده."}}]}</script>
 
-<div class="cta"><p>هل الـIT في شركتك آمن؟ حمّل قائمة الفحص المجانية (10 أسئلة)</p><a class="btn main" href="Easy-Solutions-IT-Checklist.pdf" download>تحميل القائمة (PDF)</a></div>
+<section id="check"><div class="wrap"><h2 class="t">افحص الـIT في شركتك بنفسك (مجاناً)</h2><p class="sub">أجب عن 10 أسئلة، واعرف نتيجتك ونصائح مناسبة فوراً. تستغرق دقيقتين.</p>
+<div id="cq"><div class="cq"><span class="qt"><b>1.</b> هل لديك نسخة احتياطية تلقائية لبيانات الشركة المهمة؟</span><span class="opt"><input type="radio" id="q1y" name="q1" value="1"><label for="q1y">نعم</label><input type="radio" id="q1n" name="q1" value="0"><label for="q1n">لا</label></span></div><div class="cq"><span class="qt"><b>2.</b> هل جرّبت استرجاع بياناتك من النسخة الاحتياطية خلال آخر 6 أشهر؟</span><span class="opt"><input type="radio" id="q2y" name="q2" value="1"><label for="q2y">نعم</label><input type="radio" id="q2n" name="q2" value="0"><label for="q2n">لا</label></span></div><div class="cq"><span class="qt"><b>3.</b> هل توجد نسخة واحدة على الأقل محفوظة خارج الأجهزة نفسها (خارج الشركة أو على سحابة)؟</span><span class="opt"><input type="radio" id="q3y" name="q3" value="1"><label for="q3y">نعم</label><input type="radio" id="q3n" name="q3" value="0"><label for="q3n">لا</label></span></div><div class="cq"><span class="qt"><b>4.</b> هل لكل موظف حساب خاص به وكلمة مرور قوية، وتُغلق حسابات من ترك العمل فوراً؟</span><span class="opt"><input type="radio" id="q4y" name="q4" value="1"><label for="q4y">نعم</label><input type="radio" id="q4n" name="q4" value="0"><label for="q4n">لا</label></span></div><div class="cq"><span class="qt"><b>5.</b> هل التحقق بخطوتين (MFA) مفعّل لإيميلات الشركة؟</span><span class="opt"><input type="radio" id="q5y" name="q5" value="1"><label for="q5y">نعم</label><input type="radio" id="q5n" name="q5" value="0"><label for="q5n">لا</label></span></div><div class="cq"><span class="qt"><b>6.</b> هل يوجد جدار ناري (Firewall) محدّث بين شبكتك والإنترنت؟</span><span class="opt"><input type="radio" id="q6y" name="q6" value="1"><label for="q6y">نعم</label><input type="radio" id="q6n" name="q6" value="0"><label for="q6n">لا</label></span></div><div class="cq"><span class="qt"><b>7.</b> هل برنامج الحماية من الفيروسات مثبّت ومحدّث على كل الأجهزة والسيرفرات؟</span><span class="opt"><input type="radio" id="q7y" name="q7" value="1"><label for="q7y">نعم</label><input type="radio" id="q7n" name="q7" value="0"><label for="q7n">لا</label></span></div><div class="cq"><span class="qt"><b>8.</b> هل تُحدَّث أنظمة التشغيل والسيرفرات بانتظام بالتحديثات الأمنية؟</span><span class="opt"><input type="radio" id="q8y" name="q8" value="1"><label for="q8y">نعم</label><input type="radio" id="q8n" name="q8" value="0"><label for="q8n">لا</label></span></div><div class="cq"><span class="qt"><b>9.</b> هل شبكة الـWi-Fi للضيوف منفصلة عن شبكة العمل، وكلمة مرورها قوية؟</span><span class="opt"><input type="radio" id="q9y" name="q9" value="1"><label for="q9y">نعم</label><input type="radio" id="q9n" name="q9" value="0"><label for="q9n">لا</label></span></div><div class="cq"><span class="qt"><b>10.</b> هل يوجد شخص مسؤول وخطة واضحة إن توقف النظام أو الإنترنت؟</span><span class="opt"><input type="radio" id="q10y" name="q10" value="1"><label for="q10y">نعم</label><input type="radio" id="q10n" name="q10" value="0"><label for="q10n">لا</label></span></div></div>
+<p id="cerr" class="cerr" role="alert" hidden>أجب عن كل الأسئلة لنعرض لك النتيجة.</p>
+<button type="button" class="btn main" id="cbtn">اعرف نتيجتك</button>
+<div id="cres" class="cres" hidden>
+<div class="score"><span id="cnum"></span><span id="clvl"></span></div>
+<p id="cmsg"></p><ul id="clist"></ul>
+<div class="cform"><h3>تريد مساعدة في معالجة هذه النقاط؟</h3><p class="sub" style="margin-bottom:12px">أرسل نتيجتك لنا على واتساب، ونتواصل معك لتقييم مجاني دون التزام.</p>
+<div class="two"><input id="cname" placeholder="اسم الشركة" aria-label="اسم الشركة"><input id="cphone" type="tel" inputmode="tel" placeholder="رقم الهاتف" aria-label="رقم الهاتف"></div>
+<button type="button" class="btn wabtn" id="csend">أرسل النتيجة على واتساب</button></div></div>
+<p class="note" style="margin-top:14px">تفضّل نسخة للطباعة؟ <a href="Easy-Solutions-IT-Checklist.pdf" download style="color:var(--teal);font-weight:700">حمّل القائمة (PDF)</a></p>
+</div></section>
+<script>
+(function(){var D=[{"s": "نسخ احتياطي تلقائي", "a": "فعّل نسخاً احتياطياً تلقائياً للبيانات المهمة (الملفات وقواعد البيانات والإيميلات)، فهو أول ما تحتاجه عند أي عطل أو اختراق."}, {"s": "اختبار استرجاع النسخ", "a": "اختبر استرجاع بياناتك مرة كل 6 أشهر على الأقل؛ النسخة التي لم تُجرَّب قد لا تعمل وقت الحاجة."}, {"s": "نسخة خارجية", "a": "احتفظ بنسخة واحدة على الأقل خارج أجهزتك (خارج مقر الشركة أو على سحابة)، لتنجو من السرقة أو الحريق أو فيروسات الفدية."}, {"s": "حسابات الموظفين", "a": "اجعل لكل موظف حساباً خاصاً وكلمة مرور قوية، وأغلق حسابات من ترك العمل فوراً."}, {"s": "التحقق بخطوتين MFA", "a": "فعّل التحقق بخطوتين لإيميلات الشركة؛ خطوة بسيطة تمنع كثيراً من اختراقات الحسابات."}, {"s": "الجدار الناري", "a": "ضع جداراً نارياً محدّثاً بين شبكتك والإنترنت، وراجع قواعده دورياً."}, {"s": "برنامج الحماية", "a": "ثبّت برنامج حماية محدّثاً على كل الأجهزة والسيرفرات، وتأكد أنه يتحدث تلقائياً."}, {"s": "التحديثات الأمنية", "a": "حدّث أنظمة التشغيل والسيرفرات بانتظام؛ كثير من الاختراقات تستغل ثغرات معروفة أُصلحت بتحديثات."}, {"s": "فصل Wi-Fi الضيوف", "a": "افصل Wi-Fi الضيوف عن شبكة العمل، واجعل كلمة مرور الشبكتين قوية."}, {"s": "خطة الطوارئ", "a": "حدّد مسؤولاً وخطة مكتوبة: من تتصل به وماذا تفعل عند توقف النظام أو الإنترنت."}];
+var $=function(i){return document.getElementById(i)};
+$('cbtn').addEventListener('click',function(){
+ var yes=0,no=[],miss=false;
+ for(var i=1;i<=10;i++){var r=document.querySelector('input[name=q'+i+']:checked');
+  if(!r){miss=true;continue}
+  if(r.value==='1')yes++;else no.push(D[i-1]);}
+ $('cerr').hidden=!miss; if(miss){return}
+ var lvl=yes>=8?['وضعك جيد','ok','راجع النقاط الناقصة لتكتمل الصورة.']:yes>=5?['تحتاج مراجعة','mid','هناك ثغرات تحتاج معالجة قبل أن تسبب توقفاً أو فقدان بيانات.']:['معرّض لمخاطر','bad','شركتك معرّضة لمخاطر حقيقية، وننصح بمراجعة عاجلة.'];
+ $('cnum').textContent=yes+' / 10'; var l=$('clvl'); l.textContent=lvl[0]; l.className='lv '+lvl[1];
+ $('cmsg').textContent=lvl[2];
+ var ul=$('clist'); ul.innerHTML='';
+ no.forEach(function(n){var li=document.createElement('li');var b=document.createElement('b');b.textContent=n.s+': ';li.appendChild(b);li.appendChild(document.createTextNode(n.a));ul.appendChild(li)});
+ if(!no.length){var li=document.createElement('li');li.textContent='أحسنت! حافظ على المراجعة الدورية لكل هذه النقاط.';ul.appendChild(li)}
+ var res=$('cres'); res.hidden=false; res.scrollIntoView({behavior:'smooth',block:'start'});
+ res._no=no; res._yes=yes; res._lvl=lvl[0];
+});
+$('csend').addEventListener('click',function(){
+ var res=$('cres'),no=res._no||[];
+ var m='السلام عليكم، أجريت فحص الـIT على موقعكم.\nالنتيجة: '+res._yes+'/10 ('+res._lvl+')'+(no.length?'\nنقاط تحتاج معالجة:\n- '+no.map(function(n){return n.s}).join('\n- '):'')+'\nالشركة: '+$('cname').value.trim()+'\nالهاتف: '+$('cphone').value.trim();
+ window.open('https://wa.me/201010444604?text='+encodeURIComponent(m),'_blank','noopener');
+});})();
+</script>
 
 <section class="contact" id="contact">
  <div class="wrap g">
